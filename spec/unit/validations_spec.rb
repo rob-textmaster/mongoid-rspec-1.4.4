@@ -21,6 +21,8 @@ describe "Validations" do
     it { should_not validate_inclusion_of(:admin_rights).to_allow(User::ADMIN_RIGHTS) }
 
     it { should validate_numericality_of(:age).to_allow(:greater_than => 18).unless('admin?') }
+    it { should_not validate_numericality_of(:age).to_allow(:greater_than => 18).if('admin?') }
+    it { should_not validate_numericality_of(:age).to_allow(:greater_than => 18) }
   end
 
   describe Profile do
