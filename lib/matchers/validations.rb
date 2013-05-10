@@ -1,4 +1,3 @@
-require 'pry'
 module Mongoid
   module Matchers
     module Validations
