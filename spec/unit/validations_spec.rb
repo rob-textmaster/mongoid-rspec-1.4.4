@@ -17,7 +17,7 @@ describe "Validations" do
     it { should validate_inclusion_of(:admin_rights).to_allow(User::ADMIN_RIGHTS).if(:admin?) }
 
     it { should validate_inclusion_of(:admin_rights).to_allow(User::ADMIN_RIGHTS).if(:admin?) }
-    it { should validate_inclusion_of(:admin_rights).to_allow(User::ADMIN_RIGHTS).unless(:admin?) }
+    it { should_not validate_inclusion_of(:admin_rights).to_allow(User::ADMIN_RIGHTS).unless(:admin?) }
     it { should_not validate_inclusion_of(:admin_rights).to_allow(User::ADMIN_RIGHTS) }
 
     it { should validate_numericality_of(:age).to_allow(:greater_than => 18).unless('admin?') }
