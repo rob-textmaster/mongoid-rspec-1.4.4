@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency(%q<mongoid>, ["~> 2.0"])
-  s.add_runtime_dependency(%q<rspec>, ["~> 2"])
+  s.add_runtime_dependency(%q<rspec>, ["~> 2.13"])
   s.add_development_dependency 'pry'
 
 end
