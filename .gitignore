@@ -1,3 +1,6 @@
+# Local configuration files
+.rvmrc # seriously, don't include this in git
+
 *.gem
 .bundle
 Gemfile.lock
